@@ -18,6 +18,6 @@ admin.autodiscover()
 urlpatterns = [
     #path("", hello.views.index, name="index"),
     url(r'^$', views.HomePageView.as_view())
-    path("db/", hello.views.db, name="db"),
-    path("admin/", admin.site.urls),
+    #path("db/", hello.views.db, name="db"),
+    #path("admin/", admin.site.urls),
 ]
