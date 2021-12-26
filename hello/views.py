@@ -9,7 +9,7 @@ def index(request):
     #r = requests.get('http://httpbin.org/status/418')
     #print(r.text)
     #return HttpResponse('<pre>' + r.text + '</pre>')
-    return HttpResponse('My CSC Center')
+    return HttpResponse('Online Solution CSC Center, Naya Bazar, Pandey Muhalla, Dhanbad, Jharkhand 826001')
 
 
 def db(request):
