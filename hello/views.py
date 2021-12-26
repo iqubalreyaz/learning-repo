@@ -12,8 +12,8 @@ from .models import Greeting
     #return HttpResponse('<pre>' + r.text + '</pre>')
     #return HttpResponse('Online Solution CSC Center, Naya Bazar, Pandey Muhalla, Dhanbad, Jharkhand 826001')
 
-class HomePageView(TemplateView):
-    def get(self, request, **kwargs):
+#class HomePageView(TemplateView):
+def index(self, request, **kwargs):
         return render(request, 'index.html', context=None)    
 
 
