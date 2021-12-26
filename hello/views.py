@@ -13,7 +13,7 @@ from .models import Greeting
     #return HttpResponse('Online Solution CSC Center, Naya Bazar, Pandey Muhalla, Dhanbad, Jharkhand 826001')
 
 #class HomePageView(TemplateView):
-def index(self, request, **kwargs):
+def index(request, **kwargs):
         return render(request, 'index.html', context=None)    
 
 
