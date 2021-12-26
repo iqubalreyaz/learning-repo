@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
+from django.views.generic.base import TemplateView
 
 from .models import Greeting
 
