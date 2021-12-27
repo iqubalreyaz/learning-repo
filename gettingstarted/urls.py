@@ -19,5 +19,5 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
     #url(r'^$', hello.views.HomePageView.as_view())
     #path("db/", hello.views.db, name="db"),
-    #path("admin/", admin.site.urls),
+    path("admin786/", admin.site.urls),
 ]
