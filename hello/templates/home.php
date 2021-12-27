@@ -1,3 +1,6 @@
+<?php include("server.php")?>
+
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -15,7 +18,6 @@ html {
     right:0;
     height: 100%;
     width: 100%;
-    background-color: #eee;
 }
 
 .cursors > div {
@@ -74,50 +76,51 @@ p:hover {
 
 .container > login_pane {
 	position: absolute;
+	right:10px;
 	top: 10px;
 }
-
 </style>
 
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="HandheldFriendly" content="true">
-    <title>Online Solution CSC Center</title>
+    <title>My Home</title>
 </head>
 
 
 <body>
-<div id="body" style="background-color: #eee; width: 100%; height: 645px;" >
+<div id="body" style="background-color: #eee; width: 100%; height: 745px;" >
      
 
-		<div  id="body_matter" style="background-color: white; width: 100%; height: 180px; float: left">
-		  	<h1><i>Online Solution CSC Center</i></h1>
-		    <h5>Near Eidgah Masjid, Near Gaya Bridge</h5>
-			<h5>Naya Bazar, Dhanbad, Jharkhand </h5>
-		    <h5 id='date'></h5>
-		    <script>document.getElementById('date').innerHTML = Date()</script>
+		<div id="body_matter" style="background-color: white; width: 100%; height: 180px; float: left">
+		  	<h1><i>Middleware Zone</i></h1>
+		    <h4>Knowledge Area</h4>
+		    <h6 id='date'></h6>
 			<div id="container">
-				<div id="login_pane"><button onclick="register()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Register </button>
-				<button onclick="login()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Login </button></div>
-			</div>
+			<div id="login_pane"><p>Welcome <b><?php echo ($_SESSION['username']); ?></b>..!</p>
+				<a href="logout.php">Logout</a>
+			</div>	
 		</div>
 
-			<div class="topnav" title="Please login to enable these options.">
-				<div class="home" onclick="#" style="cursor: pointer;"><p>Home</p></div>
-				<div class="services" onclick="#" style="cursor: pointer"><p>Services</p></div>
-				<div class="about" onclick="#" style="cursor: pointer"><p>About</p></div>
-				<div class="contact" onclick="#" style="cursor: pointer"><p>Feedback</p></div>
-			</div>   
+		<script>document.getElementById('date').innerHTML = Date()</script>
+		
+		</div>
+
+			<div class="topnav">
+				<div class="home" onclick="index()" style="cursor: pointer"><p>Home</p></div>
+				<div class="services" onclick="services()" style="cursor: pointer"><p>Services</p></div>
+				<div class="about" onclick="about()" style="cursor: pointer"><p>About</p></div>
+				<div class="contact" onclick="contact()" style="cursor: pointer"><p>Feedback</p></div>
+			</div>
+      
 
 
 	  <div style="background-color: grey; width: 100%; margin-left: 0px; margin-top: 0px";><marquee>WELCOME</marquee> </div>	  
 
 
 
-<div style="margin-top: 50px"><b>Welcome to Online Solution CSC Center Portal...!!</b></br><br>You can take advantage of this portal to gather information about various services provided by us.</div>
-
-
+<div><b>Welcome to the Middleware Learning Portal...!!</b></br><br>You can take advantage of this portal to learn various Middleware components.</div>
 
 <script>
 // function for topnav
