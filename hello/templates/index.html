@@ -1,58 +1,153 @@
-{% extends "base.html" %}
-{% load static %}
+<!DOCTYPE html>
+<html>
+<style>
+html {
+  background-color: black;
+}
 
-{% block content %}
+#body {
+  text-align: center;
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="{% static 'lang-logo.png'%}">
-    </a>
-    <h1>Getting Started with Python on Heroku</h1>
-    <p>This is a sample Python application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
+    /* position:fixed; */
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+}
+
+.cursors > div {
+    float: center;
+    box-sizing: border-box;
+    background: black;
+	color: white;
+    border: 8px solid #ccc;
+    width: 25%;
+	height: 100%;
+    padding: 1px 2px;
+    text-align: center;
+    white-space: nowrap;
+    &:nth-child(even) {
+       background: #eee;
+    }
+    &:hover {
+       opacity: 0.15
+    }
+}
+
+.topnav > div {
+    float: left;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    border: 8px solid #ccc;
+    width: 25%;
+    padding: 2px 2px; 
+    text-align: center;
+    white-space: nowrap;
+    &:nth-child(even) {
+       background: #eee;
+    }
+    &:hover {
+       opacity: 0.15
+    }
+}
+
+p:hover {
+  background-color: grey;
+}
+
+#body_matter {
+    position:relative;
+}
+
+#container {
+  padding: 16px;
+  border: 3px solid #ccc;
+  background-color: #eee;
+  position: absolute;
+  right:10px;
+  top: 10px;
+}
+
+.container > login_pane {
+	position: absolute;
+	top: 10px;
+}
+
+</style>
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+    <title>Online Solution CSC Center</title>
+</head>
+
+
+<body>
+<div id="body" style="background-color: #eee; width: 100%; height: 645px;" >
+     
+
+		<div  id="body_matter" style="background-color: white; width: 100%; height: 180px; float: left">
+		  	<h1><i>Online Solution CSC Center</i></h1>
+		    <h5>Near Eidgah Masjid, Near Gaya Bridge</h5>
+			<h5>Naya Bazar, Dhanbad, Jharkhand </h5>
+		    <h5 id='date'></h5>
+		    <script>document.getElementById('date').innerHTML = Date()</script>
+			<div id="container">
+				<div id="login_pane"><button onclick="register()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Register </button>
+				<button onclick="login()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Login </button></div>
+			</div>
+		</div>
+
+			<div class="topnav" title="Please login to enable these options.">
+				<div class="home" onclick="#" style="cursor: pointer;"><p>Home</p></div>
+				<div class="services" onclick="#" style="cursor: pointer"><p>Services</p></div>
+				<div class="about" onclick="#" style="cursor: pointer"><p>About</p></div>
+				<div class="contact" onclick="#" style="cursor: pointer"><p>Feedback</p></div>
+			</div>   
+
+
+	  <div style="background-color: grey; width: 100%; margin-left: 0px; margin-top: 0px";><marquee>WELCOME</marquee> </div>	  
+
+
+
+<div style="margin-top: 50px"><b>Welcome to Online Solution CSC Center Portal...!!</b></br><br>You can take advantage of this portal to gather information about various services provided by us.</div>
+
+
+
+<script>
+// function for topnav
+	function index(){
+		window.location="index.html"
+	}
+
+	function about(){
+		window.location="about.html"
+	}
+
+	function contact(){
+		window.location="contact.html"
+	}
+
+	function services(){
+		window.location="services.html"
+	}
+	
+	function register(){
+		window.location="register.php"
+	}
+
+	function login(){
+		window.location="login.php"
+	}
+
+</script>
+
+
 </div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link">Getting Started with Python on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/python-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it fetched all the dependencies in <a href="https://github.com/heroku/python-getting-started/blob/main/requirements.txt">requirements.txt</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/python-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd python-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-python#push-local-changes">deploy changes</a> to Heroku</li>
-        </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/django-app-configuration">Configuring Django Apps for Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
-</div>
-{% endblock %}
+</body>
+</html>
