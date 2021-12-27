@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import View
 from django.http import HttpResponse
 import requests
 from django.views.generic.base import TemplateView
@@ -12,9 +13,10 @@ from .models import Greeting
     #return HttpResponse('<pre>' + r.text + '</pre>')
     #return HttpResponse('Online Solution CSC Center, Naya Bazar, Pandey Muhalla, Dhanbad, Jharkhand 826001')
 
-class HomePageView(TemplateView):
-    def index(request, **kwargs):
-        return render(request, 'index.html', context=None)    
+class HomePageView(View):
+    #def index(request, **kwargs):
+        #return render(request, 'index.html', context=None)    
+        temmplate_namme='index.html'
 
 
 def db(request):
