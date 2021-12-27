@@ -78,6 +78,30 @@ p:hover {
 	top: 10px;
 }
 
+.dropdown-content {
+display: none;
+position: absolute;
+width: 100%;
+overflow: auto;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown-content a {
+display: block;
+color: #000000;
+padding: 5px;
+text-decoration: none;
+}
+
+.dropdown-content a:hover {
+color: #FFFFFF;
+background-color: #00A4BD;
+}
+
 </style>
 
 <head>
@@ -93,30 +117,36 @@ p:hover {
      
 
 		<div  id="body_matter" style="background-color: white; width: 100%; height: 180px; float: left">
-		  	<h1><i>Online Solution CSC Center</i></h1>
-		    <h5>Near Eidgah Masjid, Near Gaya Bridge</h5>
-			<h5>Naya Bazar, Dhanbad, Jharkhand </h5>
+		  	<h1>Online Solution CSC Center</h1>
+		    <h5>Near Gaya Bridge, Naya Bazar</h5>
+			<h5> Dhanbad, Jharkhand </h5>
 		    <h5 id='date'></h5>
 		    <script>document.getElementById('date').innerHTML = Date()</script>
 			<div id="container">
 				<div id="login_pane"><button onclick="register()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Register </button>
 				<button onclick="login()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Login </button></div>
-			</div>
+			</div> 
 		</div>
 
 			<div class="topnav" title="Please login to enable these options.">
 				<div class="home" onclick="#" style="cursor: pointer;"><p>Home</p></div>
-				<div class="services" onclick="#" style="cursor: pointer"><p>Services</p></div>
+				<div class="services" onclick="#" style="cursor: pointer"><p>Services</p>
+        <div class="dropdown-content">
+<a href="https://blog.hubspot.com/">Blog</a>
+<a href="https://academy.hubspot.com/">Academy</a>
+<a href="https://www.youtube.com/user/hubspot">YouTube</a>
+</div>
+        </div>
 				<div class="about" onclick="#" style="cursor: pointer"><p>About</p></div>
 				<div class="contact" onclick="#" style="cursor: pointer"><p>Feedback</p></div>
 			</div>   
 
 
-	  <div style="background-color: grey; width: 100%; margin-left: 0px; margin-top: 0px";><marquee>WELCOME TO ONLINE SOLUTION CSC CENTER...!!</marquee> </div>	  
+	  <div style="background-color: grey; width: 100%; margin-left: 0px; margin-top: 0px";><marquee>WELCOME TO ONLINE SOLUTIONS...!!</marquee> </div>	  
 
 
 
-<div style="margin-top: 50px"><b>Online Solution CSC Center Portal</b></br><br>You can take advantage of this portal to gather information about various services provided by us.</div>
+<div style="margin-top: 50px"><b>Online Solution CSC Center Portal</b><br></br><img src="csc_image.jpg"><br>You can take advantage of this portal to gather information about various services provided by us.</div>
 
 
 
@@ -135,7 +165,7 @@ p:hover {
 	}
 
 	function services(){
-		window.location="services.html"
+		window.location.href="coming_soon.html"
 	}
 	
 	function register(){
