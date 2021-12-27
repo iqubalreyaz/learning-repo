@@ -2,7 +2,7 @@
 <html>
 <style>
 html {
-  background-color: black;
+  background-color: #eee;
 }
 
 #body {
@@ -10,12 +10,13 @@ html {
 
     /* position:fixed; */
     top:0;
-    bottom:0;
+    {% comment %} bottom:0; {% endcomment %}
     left:0;
-    right:0;
-    height: 100%;
-    width: 100%;
-    background-color: #eee;
+    {% comment %} right:0; {% endcomment %}
+    {% comment %} height: 100%; {% endcomment %}
+    {% comment %} width: 100%; {% endcomment %}
+    {% comment %} min-height: 100%; {% endcomment %}
+    {% comment %} background-color: #eee; {% endcomment %}
 }
 
 .cursors > div {
