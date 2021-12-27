@@ -7,16 +7,16 @@ from django.views.generic.base import TemplateView
 from .models import Greeting
 
 # Create your views here.
-#def index(request):
+def index(request):
+    return render(request, 'index.html')
     #r = requests.get('http://httpbin.org/status/418')
     #print(r.text)
     #return HttpResponse('<pre>' + r.text + '</pre>')
     #return HttpResponse('Online Solution CSC Center, Naya Bazar, Pandey Muhalla, Dhanbad, Jharkhand 826001')
 
-class HomePageView(View):
+#class HomePageView(View):
     #def index(request, **kwargs):
-        #return render(request, 'index.html', context=None)    
-        temmplate_namme='index.html'
+        #return render(request, 'index.html', context=None)
 
 
 def db(request):
