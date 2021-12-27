@@ -78,28 +78,30 @@ p:hover {
 	top: 10px;
 }
 
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
 .dropdown-content {
-display: none;
-position: absolute;
-width: 100%;
-overflow: auto;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.4);
 }
-
 .dropdown:hover .dropdown-content {
-display: block;
+  display: block;
+  background: grey
 }
-
 .dropdown-content a {
-display: block;
-color: #000000;
-padding: 5px;
-text-decoration: none;
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
 }
-
 .dropdown-content a:hover {
-color: #FFFFFF;
-background-color: #00A4BD;
+  color: #FFFFFF;
+  background-color: #00A4BD;
 }
 
 </style>
@@ -122,23 +124,23 @@ background-color: #00A4BD;
 			<h5> Dhanbad, Jharkhand </h5>
 		    <h5 id='date'></h5>
 		    <script>document.getElementById('date').innerHTML = Date()</script>
-			<div id="container">
-				<div id="login_pane"><button onclick="register()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Register </button>
-				<button onclick="login()" style="cursor: pointer; background: black; color: white; font-family: inherit;"> Login </button></div>
-			</div> 
-		</div>
 
-			<div class="topnav" title="Please login to enable these options.">
-				<div class="home" onclick="#" style="cursor: pointer;"><p>Home</p></div>
-				<div class="services" onclick="#" style="cursor: pointer"><p>Services</p>
-        <div class="dropdown-content">
-<a href="https://blog.hubspot.com/">Blog</a>
-<a href="https://academy.hubspot.com/">Academy</a>
-<a href="https://www.youtube.com/user/hubspot">YouTube</a>
+
+			  <div class="topnav" title="Please login to enable these options.">
+				<div class="home" onclick="#" style="cursor: pointer;"><button>Home</button></div>
+<div class="dropdown">				<div class="services" onclick="#" style="cursor: pointer"><button>Services</button>
+  <div class="dropdown-content">
+  <a href="#">Voter ID</a>
+  <a href="#">Aadhaar Card</a>
+  <a href="#">Ration Card</a>
+  <a href="#">PAN Card</a>
+  <a href="#">Rail Tickets</a>
+  <a href="#">Air Tickets</a>
+  </div>
 </div>
         </div>
-				<div class="about" onclick="#" style="cursor: pointer"><p>About</p></div>
-				<div class="contact" onclick="#" style="cursor: pointer"><p>Feedback</p></div>
+				<div class="about" onclick="#" style="cursor: pointer"><button>About</button></div>
+				<div class="contact" onclick="#" style="cursor: pointer"><button>Feedback</button></div>
 			</div>   
 
 
