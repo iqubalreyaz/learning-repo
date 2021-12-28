@@ -20,4 +20,6 @@ urlpatterns = [
     #url(r'^$', hello.views.HomePageView.as_view())
     #path("db/", hello.views.db, name="db"),
     path("admin786/", admin.site.urls),
+    path("about/", hello.views.about, name="about"),
+    path("coming_soon/", hello.views.coming, name="coming"),
 ]

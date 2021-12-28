@@ -9,15 +9,13 @@ from .models import Greeting
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-    #r = requests.get('http://httpbin.org/status/418')
-    #print(r.text)
-    #return HttpResponse('<pre>' + r.text + '</pre>')
-    #return HttpResponse('Online Solution CSC Center, Naya Bazar, Pandey Muhalla, Dhanbad, Jharkhand 826001')
 
-#class HomePageView(View):
-    #def index(request, **kwargs):
-        #return render(request, 'index.html', context=None)
 
+def about(request):
+    return render(request, 'about.html')
+
+def coming(request):
+    return render(request, 'coming_soon.html')
 
 def db(request):
 
