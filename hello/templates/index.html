@@ -133,27 +133,27 @@ p:hover {
 <div style="background-color: grey; width: 100%; margin-left: 0px; margin-top: 0px";>
   <marquee>WELCOME TO ONLINE SOLUTIONS...!! ********** ऑनलाइन समाधान सीएससी केंद्र में आपका स्वागत है..!! ********** سینٹر میں خوش آمدید CSC</marquee>
 </div>	         
-				<div class="home" onclick="#" style="cursor: pointer;"><p>Home</p></div>
+				<div class="home" onclick="index()" style="cursor: pointer;"><p>Home</p></div>
   <div class="dropdown">
         <div class="services" onclick="#" style="cursor: pointer"><p>Services</p>
             <div class="dropdown-content">
-            <a href="about.html">Voter ID</a>
-            <a href="#">Aadhaar Card</a>
-            <a href="#">Ration Card</a>
-            <a href="#">PAN Card</a>
-            <a href="#">Scholarship Forms</a>
-            <a href="#">College/School Forms</a>
-            <a href="#">Bill/Fees Payments</a>	  
-            <a href="#">Rail/Air Tickets</a>
-            <a href="#">Vehicle Insurance</a>	  	  
+            <a href="coming_soon.html">Voter ID</a>
+            <a href="coming_soon.html">Aadhaar Card</a>
+            <a href="coming_soon.html">Ration Card</a>
+            <a href="coming_soon.html">PAN Card</a>
+            <a href="coming_soon.html">Scholarship Forms</a>
+            <a href="coming_soon.html">College/School Forms</a>
+            <a href="coming_soon.html">Bill/Fees Payments</a>	  
+            <a href="coming_soon.html">Rail/Air Tickets</a>
+            <a href="coming_soon.html">Vehicle Insurance</a>	  	  
   </div>
 </div>
         </div>
-				<div class="about" onclick="about.html" style="cursor: pointer"><p>About</p></div>
-				<div class="contact" onclick="#" style="cursor: pointer"><p>Feedback</p></div>
+				<div class="about" onclick="about()" style="cursor: pointer"><p>About</p></div>
+				<div class="contact" onclick="coming()" style="cursor: pointer"><p>Feedback</p></div>
 			</div>   
 
-<div style="margin-top: 60px"><b>Online Solution CSC Center Portal</b><br></br><img src="static/csc_image.JPG"><br>You can take advantage of this portal to gather information about various services provided by us.</div> 
+<div style="margin-top: 60px"><b>Online Solution CSC Center Portal</b><br></br><img src="static/digital_india.JPG"><br>You can take advantage of this portal to gather information about various services provided by us.</div> 
 		    <h6 id='date'></h6>
 		    <script>document.getElementById('date').innerHTML = Date()</script></div>
 
@@ -183,6 +183,10 @@ p:hover {
 
 	function login(){
 		window.location="login.php"
+	}
+
+  function coming(){
+		window.location="coming_soon.html"
 	}
   
 
