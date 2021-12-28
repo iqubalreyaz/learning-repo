@@ -152,17 +152,21 @@ p:hover {
 				<div class="about" onclick="about()" style="cursor: pointer"><p>About</p></div>
 				<div class="contact" onclick="coming()" style="cursor: pointer"><p>Feedback</p></div>
 			</div>   
- 
 
-<!-- JAVASCRIPT STARTED -->
-<script type="text/javascript">
+<div style="margin-top: 60px"><b>Online Solution CSC Center Portal</b><br></br><img src="static/digital_india.JPG"><br>You can take advantage of this portal to gather information about various services provided by us.</div> 
+		    <h6 id='date'></h6>
+		    <script>document.getElementById('date').innerHTML = Date()</script></div>
+
+
+
+<script>
 // function for topnav
 	function index(){
-		window.location="index"
+		window.location="index.html"
 	}
 
 	function about(){
-		window.location="about"
+		window.location="templates/about.html"
 	}
 
 	function contact(){
@@ -170,7 +174,7 @@ p:hover {
 	}
 
 	function services(){
-		window.location.href="coming"
+		window.location.href="templates/coming_soon.html"
 	}
 	
 	function register(){
@@ -185,6 +189,7 @@ p:hover {
 		window.location="coming_soon.html"
 	}
   
+
 </script>
 
 
