@@ -21,5 +21,5 @@ urlpatterns = [
     #path("db/", hello.views.db, name="db"),
     path("admin786/", admin.site.urls),
     path("about/", hello.views.about, name="about"),
-    path("coming_soon/", hello.views.coming, name="coming"),
+    path("coming/", hello.views.coming, name="coming"),
 ]
