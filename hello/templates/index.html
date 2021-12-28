@@ -98,8 +98,10 @@ p:hover {
 }
 .dropdown-content a {
   display: block;
-  color: #000000;
-  padding: 5px;
+    background-color: #f9f9f9;
+  {% comment %} color: #000000; {% endcomment %}
+  padding: 10px;
+    transition: all .5s ease-in;
   text-decoration: none;
 }
 .dropdown-content a:hover {
@@ -127,25 +129,27 @@ p:hover {
 			<h5>Naya Bazar, Dhanbad, Jharkhand </h5>
 
 
-			  <div class="topnav" title="Please login to enable these options.">
-<div style="background-color: grey; width: 100%; margin-left: 0px; margin-top: 0px";><marquee>WELCOME TO ONLINE SOLUTIONS...!! ********** ऑनलाइन समाधान सीएससी केंद्र में आपका स्वागत है..!! ********** سینٹر میں خوش آمدید CSC</marquee> </div>	         
+			  <div class="topnav" title="Click to see details.">
+<div style="background-color: grey; width: 100%; margin-left: 0px; margin-top: 0px";>
+  <marquee>WELCOME TO ONLINE SOLUTIONS...!! ********** ऑनलाइन समाधान सीएससी केंद्र में आपका स्वागत है..!! ********** سینٹر میں خوش آمدید CSC</marquee>
+</div>	         
 				<div class="home" onclick="#" style="cursor: pointer;"><p>Home</p></div>
-<div class="dropdown">				<div class="services" onclick="#" style="cursor: pointer"><p>Services</p>
-  <div class="dropdown-content">
-  <a href="#">Voter ID</a>
-  <a href="#">Aadhaar Card</a>
-  <a href="#">Ration Card</a>
-  <a href="#">PAN Card</a>
-  <a href="#">Scholarship Forms</a>
-  <a href="#">College/School Forms</a>
-  <a href="#">Bill/Fees Payments</a>	  
-  <a href="#">Rail/Air Tickets</a>
-  <a href="#">Vehicle Insurance</a>	  
-	  
+  <div class="dropdown">
+        <div class="services" onclick="#" style="cursor: pointer"><p>Services</p>
+            <div class="dropdown-content">
+            <a href="about.html">Voter ID</a>
+            <a href="#">Aadhaar Card</a>
+            <a href="#">Ration Card</a>
+            <a href="#">PAN Card</a>
+            <a href="#">Scholarship Forms</a>
+            <a href="#">College/School Forms</a>
+            <a href="#">Bill/Fees Payments</a>	  
+            <a href="#">Rail/Air Tickets</a>
+            <a href="#">Vehicle Insurance</a>	  	  
   </div>
 </div>
         </div>
-				<div class="about" onclick="#" style="cursor: pointer"><p>About</p></div>
+				<div class="about" onclick="about.html" style="cursor: pointer"><p>About</p></div>
 				<div class="contact" onclick="#" style="cursor: pointer"><p>Feedback</p></div>
 			</div>   
 
@@ -180,6 +184,7 @@ p:hover {
 	function login(){
 		window.location="login.php"
 	}
+  
 
 </script>
 
