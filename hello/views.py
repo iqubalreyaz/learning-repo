@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
-from django.http import HttpResponse
 import requests
-from django.views.generic.base import TemplateView
 
 from .models import Greeting
 
@@ -19,3 +17,6 @@ def coming(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def thanks(request):
+    return render(request, 'thank_you.html')
