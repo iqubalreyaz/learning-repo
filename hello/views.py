@@ -17,11 +17,5 @@ def about(request):
 def coming(request):
     return render(request, 'coming_soon.html')
 
-def db(request):
-
-    greeting = Greeting()
-    greeting.save()
-
-    greetings = Greeting.objects.all()
-
-    return render(request, "db.html", {"greetings": greetings})
+def contact(request):
+    return render(request, 'contact.html')
