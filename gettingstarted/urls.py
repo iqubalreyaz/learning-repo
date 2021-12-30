@@ -4,7 +4,6 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-import hello.views
 import onlinecsccenter.views
 
 
