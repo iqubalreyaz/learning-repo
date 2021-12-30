@@ -161,7 +161,7 @@ html {
 
 
 
-<script>
+<script language=JavaScript>
 // function for topnav
 	function index(){
 		window.location="https://onlinesolutioncsccenter.herokuapp.com/"
@@ -191,6 +191,15 @@ html {
 		window.location="https://onlinesolutioncsccenter.herokuapp.com/coming"
 	}
   
+
+var message = "This function is disabled by the Developer...!!";
+
+function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+
+if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+
+document.onmousedown = rtclickcheck;
+
 
 </script>
 
